@@ -30,7 +30,7 @@ export default function Hero() {
             alt={site.brand}
             width={400}
             height={600}
-            className="object-contain"
+            className="object-contain w-[250px] h-[375px] md:w-[400px] md:h-[600px]"
             priority
           />
         </div>
