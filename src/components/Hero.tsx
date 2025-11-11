@@ -24,7 +24,7 @@ export default function Hero() {
 
       <Container className="min-h-[70vh] flex flex-col items-center justify-center text-center">
         {/* Centered Logo */}
-        <div className="-mb-16">
+        <div className="-mb-8 md:-mb-16">
           <Image
             src={heroLogo}
             alt={site.brand}
