@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Karen",
+    "photo": "/brand/barber-1.jpg",
+    "phrase": "Precision cuts with street style",
+    "booksyUrl": "https://booksy.com/carlos",
+    "instagram": "https://instagram.com/carlos_barber"
+  },
+  {
+    "id": 2,
+    "name": "Javier",
+    "photo": "/brand/barber-2.jpg",
+    "phrase": "Master of the fade",
+    "booksyUrl": "https://booksy.com/javier",
+    "instagram": "https://instagram.com/javier_cuts"
+  },
+  {
+    "id": 3,
+    "name": "Sebastian",
+    "photo": "/brand/barber-3.jpg",
+    "phrase": "Classic cuts, modern vibes",
+    "booksyUrl": "https://booksy.com/sebastian",
+    "instagram": "https://instagram.com/sebastian_barber"
+  },
+  {
+    "id": 4,
+    "name": "Papon",
+    "photo": "/brand/barber-4.jpg",
+    "phrase": "Your style, perfected",
+    "booksyUrl": "https://booksy.com/alex",
+    "instagram": "https://instagram.com/alex_fades"
+  }
+]
