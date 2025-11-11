@@ -1,0 +1,7 @@
+[
+  { "title": "Regular Cut", "price": 30, "desc": "Classic scissor/clipper cut." },
+  { "title": "Skin Fade", "price": 35, "desc": "Tight fade with clean finish." },
+  { "title": "Beard Trim", "price": 20, "desc": "Shape, line-up, and oil." },
+  { "title": "Cut + Beard", "price": 45, "desc": "Full service combo." },
+  { "title": "Hot Towel Shave", "price": 25, "desc": "Traditional straight razor." }
+]

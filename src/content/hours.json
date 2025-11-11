@@ -1,0 +1,9 @@
+[
+  { "day": "Mon", "open": "10:00", "close": "18:00" },
+  { "day": "Tue", "open": "10:00", "close": "18:00" },
+  { "day": "Wed", "open": "10:00", "close": "18:00" },
+  { "day": "Thu", "open": "10:00", "close": "18:00" },
+  { "day": "Fri", "open": "10:00", "close": "19:00" },
+  { "day": "Sat", "open": "10:00", "close": "17:00" },
+  { "day": "Sun", "open": null,   "close": null }
+]
