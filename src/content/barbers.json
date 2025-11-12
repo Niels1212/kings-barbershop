@@ -1,11 +1,13 @@
 [
   {
     "id": 1,
-    "name": "Karen",
-    "photo": "/brand/barber-1.jpg",
-    "phrase": "Precision cuts with street style",
-    "booksyUrl": "https://booksy.com/en-us/instant-experiences/widget/1208341?instant_experiences_enabled=true&ig_ix=true&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGniTsaKSuETXxIA4Ik0XN3JZuN7JNFXMGwtaJuuxu53Yug5vk1RRFebsWrP-s_aem_E6eesoq428j1v71-jvAdTA",
-    "instagram": "https://www.instagram.com/kingsbarbershop.7/"
+    "name": "Sebastian",
+    "photo": "/brand/barber-3.jpg",
+    "phrase": "Classic cuts, modern vibes",
+    "booksyUrl": "https://booksy.com/en-us/781592_sebastian-leal_barber-shop_28567_west-new-york?do=invite&_branch_match_id=1419827900644345451&utm_medium=merchant_customer_invite&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVdwuPCLHMNck1C06yrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAACfAszwAAAA%3D",
+    "instagram": "https://www.instagram.com/sebastianleal.7/",
+    "photoPosition": "center 20%",
+    "brightness": "1.15"
   },
   {
     "id": 2,
@@ -13,15 +15,17 @@
     "photo": "/brand/barber-2.jpg",
     "phrase": "Master of the fade",
     "booksyUrl": "https://booksy.com/en-us/instant-experiences/widget/1208341?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnlEJf8-XNljJO3Qd-d2QhGAwmVxOXxhIAuDmgQV85wh2QNB0N2P5pze9XDmU_aem_rYj__EyGZ4l9B9TmX-oT0Q",
-    "instagram": "https://www.instagram.com/samurai_barber_hn/"
+    "instagram": "https://www.instagram.com/samurai_barber_hn/",
+    "photoPosition": "center 25%"
   },
   {
     "id": 3,
-    "name": "Sebastian",
-    "photo": "/brand/barber-3.jpg",
-    "phrase": "Classic cuts, modern vibes",
-    "booksyUrl": "https://booksy.com/en-us/781592_sebastian-leal_barber-shop_28567_west-new-york?do=invite&_branch_match_id=1419827900644345451&utm_medium=merchant_customer_invite&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVdwuPCLHMNck1C06yrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAACfAszwAAAA%3D",
-    "instagram": "https://www.instagram.com/sebastianleal.7/"
+    "name": "Karen",
+    "photo": "/brand/barber-1.jpg",
+    "phrase": "Precision cuts with street style",
+    "booksyUrl": "https://booksy.com/en-us/instant-experiences/widget/1208341?instant_experiences_enabled=true&ig_ix=true&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGniTsaKSuETXxIA4Ik0XN3JZuN7JNFXMGwtaJuuxu53Yug5vk1RRFebsWrP-s_aem_E6eesoq428j1v71-jvAdTA",
+    "instagram": "https://www.instagram.com/kingsbarbershop.7/",
+    "photoPosition": "center 30%"
   },
   {
     "id": 4,
@@ -29,6 +33,25 @@
     "photo": "/brand/barber-4.jpg",
     "phrase": "Your style, perfected",
     "booksyUrl": "https://booksy.com/en-us/instant-experiences/widget/1208341?instant_experiences_enabled=true&ig_ix=true&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGniTsaKSuETXxIA4Ik0XN3JZuN7JNFXMGwtaJuuxu53Yug5vk1RRFebsWrP-s_aem_E6eesoq428j1v71-jvAdTA",
-    "instagram": "https://www.instagram.com/jeanomar_/"
+    "instagram": "https://www.instagram.com/jeanomar_/",
+    "photoPosition": "center 40%"
+  },
+  {
+    "id": 5,
+    "name": "Camilo",
+    "photo": "/brand/camilo.jpeg",
+    "phrase": "Style with precision",
+    "booksyUrl": "http://camigomezbarber.booksy.com/s/",
+    "instagram": "https://www.instagram.com/kingsbarbershop.7/",
+    "photoPosition": "center center"
+  },
+  {
+    "id": 6,
+    "name": "Diego",
+    "photo": "/brand/Diego.jpeg",
+    "phrase": "Expert cuts, every time",
+    "booksyUrl": "https://booksy.com/en-us/instant-experiences/widget/1208341?instant_experiences_enabled=true&ig_ix=true&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGn_am_-ucHqvX5A5DX2wVODdJTHptE2vBIL7uLXkg1ZVWKozX-ix5pijFK1i8_aem_4u1HVF7SSQnGxmIjyjkaog",
+    "instagram": "https://www.instagram.com/kingsbarbershop.7/",
+    "photoPosition": "center center"
   }
 ]
