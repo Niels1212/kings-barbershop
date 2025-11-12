@@ -7,6 +7,8 @@ import site from "@/content/site.json";
 import Container from "./Container";
 import SocialLinks from "./SocialLinks";
 import logo from "@/../public/brand/logo.png";
+import { useSmoothScroll } from "@/hooks/useSmoothScroll";
+import { NAV_HEIGHT } from "@/lib/constants";
 
 const NAV_LINKS = [
   { href: "#barbers", label: "Barbers" },
@@ -18,6 +20,7 @@ const NAV_LINKS = [
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { scrollToSection } = useSmoothScroll();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -29,18 +32,7 @@ export default function Nav() {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setOpen(false);
-    
-    const element = document.querySelector(href);
-    if (element) {
-      const navHeight = 80; // Height of fixed navbar
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-    }
+    scrollToSection(href);
   };
 
   return (
