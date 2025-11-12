@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import ServicesGrid from "@/components/ServicesGrid";
 import Hours from "@/components/Hours";
 import Barbers from "@/components/Barbers";
+import Contact from "@/components/Contact";
 import site from "@/content/site.json";
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
       <main>
         <Hero />
 
-        <section className="py-16 bg-white/5">
+        <section id="barbers" className="py-16 bg-white/5">
           <Container>
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-white to-primary bg-clip-text text-transparent">
@@ -32,7 +33,7 @@ export default function Home() {
           </Container>
         </section>
 
-        <section className="py-20 bg-gradient-to-b from-black to-black/95">
+        <section id="services" className="py-20 bg-gradient-to-b from-black to-black/95">
           <Container>
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-white to-primary bg-clip-text text-transparent">
@@ -52,7 +53,7 @@ export default function Home() {
           </Container>
         </section>
 
-        <section className="py-20 bg-white/5">
+        <section id="hours" className="py-20 bg-white/5">
           <Container>
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-white to-primary bg-clip-text text-transparent">
@@ -125,6 +126,26 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+            </div>
+          </Container>
+        </section>
+
+        <section id="contact" className="py-20 bg-gradient-to-b from-black to-black/95">
+          <Container>
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-white to-primary bg-clip-text text-transparent">
+                Contact Us
+              </h2>
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <div className="h-px w-12 bg-gradient-to-r from-transparent to-primary"></div>
+                <p className="text-lg md:text-xl text-white/90 font-light tracking-wide">
+                  We're here to help
+                </p>
+                <div className="h-px w-12 bg-gradient-to-l from-transparent to-primary"></div>
+              </div>
+            </div>
+            <div className="mt-10">
+              <Contact />
             </div>
           </Container>
         </section>

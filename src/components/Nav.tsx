@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import site from "@/content/site.json";
 import Container from "./Container";
@@ -10,15 +9,13 @@ import SocialLinks from "./SocialLinks";
 import logo from "@/../public/brand/logo.png";
 
 const NAV_LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/gallery", label: "Gallery" },
-  { href: "/contact", label: "Contact" },
+  { href: "#barbers", label: "Barbers" },
+  { href: "#services", label: "Services" },
+  { href: "#hours", label: "Hours" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export default function Nav() {
-  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -29,10 +26,22 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close mobile menu when navigating
-  useEffect(() => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
     setOpen(false);
-  }, [pathname]);
+    
+    const element = document.querySelector(href);
+    if (element) {
+      const navHeight = 80; // Height of fixed navbar
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
 
   return (
     <header
@@ -60,21 +69,15 @@ export default function Nav() {
         {/* Desktop nav - centered */}
         <nav className="hidden md:flex items-center gap-8">
           {NAV_LINKS.map((link) => {
-            const active =
-              link.href === "/"
-                ? pathname === "/"
-                : pathname.startsWith(link.href);
             return (
-              <Link
+              <a
                 key={link.href}
                 href={link.href}
-                className={[
-                  "text-sm uppercase tracking-wider font-light hover:text-primary transition",
-                  active ? "text-primary" : "opacity-90",
-                ].join(" ")}
+                onClick={(e) => handleClick(e, link.href)}
+                className="text-sm uppercase tracking-wider font-light opacity-90 hover:text-primary transition cursor-pointer"
               >
                 {link.label}
-              </Link>
+              </a>
             );
           })}
         </nav>
@@ -111,21 +114,15 @@ export default function Nav() {
       >
         <div className="px-4 py-3 space-y-3 bg-black/85 backdrop-blur">
           {NAV_LINKS.map((link) => {
-            const active =
-              link.href === "/"
-                ? pathname === "/"
-                : pathname.startsWith(link.href);
             return (
-              <Link
+              <a
                 key={link.href}
                 href={link.href}
-                className={[
-                  "block rounded px-2 py-2 hover:bg-white/10 uppercase tracking-wider font-light",
-                  active ? "text-primary" : "opacity-90",
-                ].join(" ")}
+                onClick={(e) => handleClick(e, link.href)}
+                className="block rounded px-2 py-2 hover:bg-white/10 uppercase tracking-wider font-light opacity-90 cursor-pointer"
               >
                 {link.label}
-              </Link>
+              </a>
             );
           })}
 

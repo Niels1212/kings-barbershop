@@ -40,7 +40,7 @@ export default function Hero() {
           href={site.bookingUrl}
           target="_blank"
           rel="noreferrer"
-          className="inline-block rounded-full border-2 border-white/40 bg-white/10 backdrop-blur-sm px-12 py-3 font-semibold text-white hover:bg-white/20 transition uppercase tracking-wider"
+          className="inline-block rounded-full border-2 border-primary bg-white/10 backdrop-blur-sm px-12 py-3 font-semibold text-white hover:bg-primary/20 hover:border-primary/80 transition uppercase tracking-wider shadow-lg"
         >
           BOOK
         </a>
