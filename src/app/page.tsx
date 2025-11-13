@@ -62,7 +62,7 @@ export default function Home() {
               <div className="flex items-center justify-center gap-3 mb-3">
                 <div className="h-px w-12 bg-gradient-to-r from-transparent to-primary"></div>
                 <p className="text-lg md:text-xl text-white/90 font-light tracking-wide">
-                  Visit us at {site.address}
+                  {site.address}
                 </p>
                 <div className="h-px w-12 bg-gradient-to-l from-transparent to-primary"></div>
               </div>

@@ -12,6 +12,9 @@ module.exports = {
         dark: "#0D0D0D",    // charcoal
         light: "#F5F5F5",   // off-white
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))',
+      },
     },
   },
   plugins: [],

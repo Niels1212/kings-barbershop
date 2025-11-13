@@ -1,7 +1,9 @@
 [
-  { "title": "Regular Cut", "price": 30, "desc": "Classic scissor/clipper cut." },
   { "title": "Skin Fade", "price": 35, "desc": "Tight fade with clean finish." },
-  { "title": "Beard Trim", "price": 20, "desc": "Shape, line-up, and oil." },
-  { "title": "Cut + Beard", "price": 45, "desc": "Full service combo." },
-  { "title": "Hot Towel Shave", "price": 25, "desc": "Traditional straight razor." }
+  { "title": "Haircut and Beard", "price": 40, "desc": "Full service combo." },
+  { "title": "Master Experience Barber", "price": 55, "desc": "Premium service by master barber." },
+  { "title": "Regular Haircut", "price": 30, "desc": "Classic scissor/clipper cut." },
+  { "title": "Haircut Kids", "price": 30, "desc": "Haircut for children." },
+  { "title": "Beard Trim and Lineup", "price": 25, "desc": "Shape, line-up, and oil." },
+  { "title": "Hair Color Men's", "price": 150, "desc": "Professional hair coloring service." }
 ]

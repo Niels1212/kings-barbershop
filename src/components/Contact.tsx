@@ -132,14 +132,15 @@ export default function Contact() {
           <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center mb-4">
             <LocationIcon className="w-6 h-6 text-primary" />
           </div>
-          <div className="text-sm text-white/60 uppercase tracking-wide mb-2">Location</div>
+          <div className="text-sm text-white/60 uppercase tracking-wide mb-2">Hours & Location</div>
           <a 
             href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.address)}`}
             target="_blank"
             rel="noreferrer"
-            className="text-lg text-white/90 hover:text-primary transition"
+            className="text-white/90 hover:text-primary transition leading-relaxed"
           >
-            {site.address}
+            <div className="font-semibold">{site.address.split(',')[0]}</div>
+            <div className="text-sm">{site.address.split(',').slice(1).join(',').trim()}</div>
           </a>
         </div>
 
