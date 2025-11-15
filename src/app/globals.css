@@ -4,3 +4,18 @@
 
 /* Now you can safely apply custom color utilities */
 body { @apply bg-dark text-light; }
+
+@layer utilities {
+  .animate-pulse-subtle {
+    animation: pulse-subtle 3s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
