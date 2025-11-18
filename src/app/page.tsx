@@ -6,6 +6,7 @@ import ServicesGrid from "@/components/ServicesGrid";
 import Hours from "@/components/Hours";
 import Barbers from "@/components/Barbers";
 import Contact from "@/components/Contact";
+import Reviews from "@/components/Reviews";
 import site from "@/content/site.json";
 
 export default function Home() {
@@ -129,6 +130,9 @@ export default function Home() {
             </div>
           </Container>
         </section>
+
+        {/* Reviews Section */}
+        <Reviews />
 
         <section id="contact" className="py-20 bg-gradient-to-b from-black to-black/95">
           <Container>

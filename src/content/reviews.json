@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Michael Rodriguez",
+    "rating": 5,
+    "date": "2024-11-10",
+    "text": "Best barbershop in town! Sebastian gave me the cleanest fade I've ever had. The atmosphere is professional and welcoming. Highly recommend!",
+    "barber": "Sebastian"
+  },
+  {
+    "id": 2,
+    "name": "David Chen",
+    "rating": 5,
+    "date": "2024-11-08",
+    "text": "Karen is amazing! She really takes her time and pays attention to detail. My haircut came out perfect. Will definitely be coming back.",
+    "barber": "Karen"
+  },
+  {
+    "id": 3,
+    "name": "James Thompson",
+    "rating": 5,
+    "date": "2024-11-05",
+    "text": "Javier is a master of his craft. Been going to him for months and never disappointed. Great conversation and even better cuts!",
+    "barber": "Javier"
+  },
+  {
+    "id": 4,
+    "name": "Carlos Martinez",
+    "rating": 5,
+    "date": "2024-11-02",
+    "text": "Clean shop, professional service, and amazing results. Papon hooked me up with exactly what I wanted. Five stars all the way!",
+    "barber": "Papon"
+  },
+  {
+    "id": 5,
+    "name": "Robert Johnson",
+    "rating": 5,
+    "date": "2024-10-28",
+    "text": "Kings Barbershop is the real deal. The attention to detail and customer service is unmatched. My go-to spot for haircuts!",
+    "barber": "Sebastian"
+  },
+  {
+    "id": 6,
+    "name": "Alex Rivera",
+    "rating": 5,
+    "date": "2024-10-25",
+    "text": "Camilo did an excellent job on my haircut and beard trim. Very skilled and friendly. The whole experience was top-notch!",
+    "barber": "Camilo"
+  }
+]

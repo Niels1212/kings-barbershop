@@ -1,30 +1,34 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Container from "./Container";
 import site from "@/content/site.json";
+import { CalendarCheckIcon, WhatsAppIcon, InstagramIcon } from "@/components/icons";
 
 // Static import automatically adds a hash to the built file
-import hero1 from "@/../public/brand/fondo.jpeg";
-import hero2 from "@/../public/brand/fondo2.jpeg";
+import hero from "@/../public/brand/fondo.jpeg";
 import heroLogo from "@/../public/brand/hero-logo.png";
 
 export default function Hero() {
-  const [useHero2, setUseHero2] = useState(true);
-  const hero = useHero2 ? hero2 : hero1;
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Check if we've scrolled past the hero section (adjust threshold as needed)
+      setIsScrolled(window.scrollY > window.innerHeight * 0.6);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const instagramUrl = site.socials.find(s => s.name === "Instagram")?.url || "";
+  const whatsappUrl = `https://wa.me/${site.whatsapp}`;
 
   return (
     <section className="relative">
-      {/* Background Toggle Button - Top Right */}
-      <button
-        onClick={() => setUseHero2(!useHero2)}
-        className="absolute top-4 right-4 z-20 px-4 py-2 bg-white/10 backdrop-blur-sm border border-primary/30 rounded-lg text-white text-sm hover:bg-primary/20 transition"
-      >
-        Switch Background
-      </button>
-
       {/* Background image */}
       <div className="absolute inset-0 -z-10">
         <Image
@@ -40,7 +44,7 @@ export default function Hero() {
 
       <Container className="min-h-[70vh] flex flex-col items-center justify-center text-center">
         {/* Centered Logo */}
-        <div className="-mt-8">
+        <div className="-mb-8 md:-mb-16">
           <Image
             src={heroLogo}
             alt={site.brand}
@@ -49,26 +53,54 @@ export default function Hero() {
             className="object-contain w-[250px] h-[375px] md:w-[400px] md:h-[600px]"
             priority
           />
-          {/* Since 2024 Badge */}
-          <div className="flex items-center justify-center gap-3 -mt-12 md:-mt-24 mb-8 md:mb-6">
-            <div className="h-px w-12 bg-gradient-to-r from-transparent to-primary"></div>
-            <span className="text-sm md:text-base font-bold tracking-[0.35em] uppercase text-primary animate-pulse-subtle" style={{ textShadow: '0 0 15px rgba(212,175,55,0.9), 0 0 30px rgba(212,175,55,0.5)' }}>
-              Since 2024
-            </span>
-            <div className="h-px w-12 bg-gradient-to-l from-transparent to-primary"></div>
-          </div>
         </div>
 
-        {/* Book Button */}
+        {/* Book Button - Static in Hero */}
         <a
           href={site.bookingUrl}
           target="_blank"
           rel="noreferrer"
-          className="inline-block rounded-full border-2 border-primary bg-white/10 backdrop-blur-sm px-12 py-3 font-semibold text-white hover:bg-primary/20 hover:border-primary/80 transition uppercase tracking-wider shadow-lg"
+          className={`inline-block rounded-full border-2 border-primary bg-white/10 backdrop-blur-sm px-12 py-3 font-semibold text-white hover:bg-primary/20 hover:border-primary/80 transition uppercase tracking-wider shadow-lg ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
         >
           BOOK
         </a>
       </Container>
+
+      {/* Floating Action Buttons - Always visible */}
+      <div className="fixed bottom-4 right-4 z-50 flex flex-col gap-2">
+        {/* Book Button - Only shows when scrolled */}
+        <a
+          href={site.bookingUrl}
+          target="_blank"
+          rel="noreferrer"
+          className={`w-12 h-12 rounded-full bg-primary/80 hover:bg-primary flex items-center justify-center text-white shadow-md hover:scale-105 transition-all duration-300 ${isScrolled ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}
+          title="Book Appointment"
+        >
+          <CalendarCheckIcon className="w-5 h-5" />
+        </a>
+
+        {/* WhatsApp Button - Always visible */}
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="w-12 h-12 rounded-full bg-[#25D366]/80 hover:bg-[#25D366] flex items-center justify-center text-white shadow-md hover:scale-105 transition-all"
+          title="WhatsApp"
+        >
+          <WhatsAppIcon className="w-5 h-5" />
+        </a>
+
+        {/* Instagram Button - Always visible */}
+        <a
+          href={instagramUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-600/80 via-pink-600/80 to-orange-500/80 hover:from-purple-600 hover:via-pink-600 hover:to-orange-500 flex items-center justify-center text-white shadow-md hover:scale-105 transition-all"
+          title="Instagram"
+        >
+          <InstagramIcon className="w-5 h-5" />
+        </a>
+      </div>
     </section>
   );
 }
